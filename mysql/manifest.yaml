@@ -44,9 +44,10 @@ spec:
   replicas: 2 # by default is 1
   template: # Pod definition 
     metadata:
-      project: expense
-      component: mysql
-      tier: db
+      labels:
+        project: expense
+        component: mysql
+        tier: db
     spec:
       containers:
       - name: mysql
